@@ -212,7 +212,7 @@ numpy                     1.23.1                   pypi_0    pypi
 numpydoc                  1.1.0                      py_0
 oauthlib                  3.2.0                    pypi_0    pypi
 olefile                   0.46                       py_0
-openpyxl                  3.0.4                      py_0
+openpyxl                  3.0.7                      py_0
 openssl                   1.1.1g               he774522_0
 opt-einsum                3.3.0                    pypi_0    pypi
 outcome                   1.1.0                    pypi_0    pypi
