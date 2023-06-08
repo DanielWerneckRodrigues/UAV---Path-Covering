@@ -78,47 +78,79 @@ i.	 ‘matriz muito simples’ (matriz 4x3):
     * exp_rate decay (epsilon) = [0.001, 0.005];
 
     * quantidade maxima de passos = 5.000;
-    
+
     * quantidade de episódios = 8000;
 
 ii.	‘matriz simples’ (5x5):
+
     o	Learning rate = [0.01, 0.001, 0.0001];
+
     o	Gamma = [0.95, 0.99];
+
     o	d_f = [0.8, 0.9, 0.95, 0.999];
+
     o	max exp_rate (epsilon) = 1.0;
+
     o	min exp_rate decay (epsilon) = 0.01;
+
     o	exp_rate decay (epsilon) = [0.001, 0.005];
+
     o	quantidade maxima de passos = 10.000;
+
     o	quantidade de episódios = 8000
 
 iii.	‘matriz média’ (8x8):
+
     o	Learning rate = [0.01, 0.001, 0.0001];
+
     o	Gamma = [0.95, 0.99];
+
     o	d_f = [0.8, 0.9, 0.95, 0.999];
+
     o	max exp_rate (epsilon) = 1.0;
+
     o	min exp_rate decay (epsilon) = 0.01;
+
     o	exp_rate decay (epsilon) = [0.001, 0.005];
+
     o	quantidade maxima de passos = 10.000;
+
     o	quantidade de episódios = 8000
 
 iv.	‘matriz simples’ (5x5):
+
     o	Learning rate = [0.01, 0.001, 0.0001];
+
     o	Gamma = [0.95, 0.99];
+
     o	d_f = [0.8, 0.9, 0.95, 0.999];
+
     o	max exp_rate (epsilon) = 1.0;
+
     o	min exp_rate decay (epsilon) = 0.01;
+
     o	exp_rate decay (epsilon) = [0.001, 0.005];
+
     o	quantidade maxima de passos = 10.000;
+
     o	quantidade de episódios = 8000
 
-v.	‘matriz complexa’ (9x13)
+v.	‘matriz complexa’ (9x13):
+
     o	Learning rate = [0.01, 0.001, 0.0001];
+
     o	Gamma = [0.95, 0.99];
+
     o	d_f = [0.8, 0.9, 0.95, 0.999];
+
     o	max exp_rate (epsilon) = 1.0;
+
     o	min exp_rate decay (epsilon) = 0.01;
+
     o	exp_rate decay (epsilon) = [0.001, 0.005];
+
     o	quantidade maxima de passos = 10.000;
+
     o	quantidade de episódios = 8000
 
 ### 4. Resultados
