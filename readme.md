@@ -64,13 +64,21 @@ Cada configuração a seguir teve o modelo rodado 10 vezes para obtenção de re
 Posteriormente foi realizada uma busca de melhores hiperparâmetros para cada cenário, em que tivemos o modelo rodado 10 vezes para cada configuração, sendo avaliados:
 
 i.	 ‘matriz muito simples’ (matriz 4x3):
+
     * Learning rate = [0.01, 0.001, 0.0001];
+
     * Gamma = [0.95, 0.99];
+
     * d_f = 0.95;
+
     * max exp_rate (epsilon) = 1.0;
+
     * min exp_rate decay (epsilon) = 0.01;
+
     * exp_rate decay (epsilon) = [0.001, 0.005];
+
     * quantidade maxima de passos = 5.000;
+    
     * quantidade de episódios = 8000;
 
 ii.	‘matriz simples’ (5x5):
