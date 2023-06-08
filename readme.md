@@ -16,12 +16,11 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 Calamidades sempre ocorreram no mundo e, muitas vezes, a improbabilidade de ocorrerem, as torna de difícil previsão e precaução.  Sendo assim, busca-se o melhor comportamento e planejamento diante de um desastre, de forma a maximizar a quantidade de sobreviventes e minimizar o tempo de exposição ao perigo ao qual as vítimas estão sendo submetidas. O objetivo deste trabalho é otimizar o planejamento do resgate de vítimas, concluindo a busca com a menor quantidade de passos, dado um cenário em que conhecemos as prioridades de cada subespaço em nosso espaço de busca. Para resolução deste problema, será utilizada o método Q Learning na área de Reinforcement Learning para a otimização da rota a ser percorrida pelo agente.
 
 ### Abstract
---
+
+Calamities have always occurred in the world and, many times, the improbability of their occurrence makes them difficult to predict and prevent. Therefore, the best behavior and planning in the face of a disaster is sought, in order to maximize the number of survivors and minimize the time of exposure to the danger to which the victims are being subjected. The aim of this work is to optimize victim rescue planning, completing the search with the fewest steps, given a scenario in which we know the priorities of each subspace in our search space. To solve this problem, the Q Learning method will be used in the Reinforcement Learning area to optimize the route to be taken by the agent.
 
 
 ### 1. Introdução
-
-Calamidades sempre ocorreram no mundo e, muitas vezes, a improbabilidade de ocorrerem, as torna de difícil previsão e precaução.  Sendo assim, busca-se o melhor comportamento e planejamento diante de um desastre, de forma a maximizar a quantidade de sobreviventes e minimizar o tempo de exposição ao perigo ao qual as vítimas estão sendo submetidas. O objetivo deste trabalho é otimizar o planejamento do resgate de vítimas, concluindo a busca com a menor quantidade de passos, dado um cenário em que conhecemos as prioridades de cada subespaço em nosso espaço de busca. Para resolução deste problema, será utilizada o método Q Learning na área de Reinforcement Learning para a otimização da rota a ser percorrida pelo agente.
 
 Em Reinforcement Learning, o aprendizado ocorre através da interação de um agente com o ambiente, recebendo recompensas ou punições. Após n jogos jogados, temos um agente especializado no problema em questão que aprende através da maximização total das recompensas recebidas ao longo de cada jogo. Quase todos os problemas de Reinforcement Learning usa o framework matemático de Markov Decision Process (MDP), em que estados futuros dependem apenas do estado presente.
 
@@ -36,6 +35,7 @@ Além do principal objetivo e da aplicabilidade direta na área de calamidades, 
 ### 2. Problema e Premissas
 
 Cada subespaço do nosso espaço de busca será subdividido em quadrantes, onde cada quadrante terá uma prioridade pré-definida. Essa prioridade pode ser estabelecida de acordo com: maior chance de sobrevivência das vítimas contidas no quadrante, maior quantidade de vítimas no quadrante, ou qualquer outra forma de priorização que se julgue adequada para o problema em questão. Para este trabalho será considerado uma matriz de prioridades onde temos um epicentro da catástrofe com maior priorização e, quanto mais afastado deste epicentro, menores serão as prioridades.
+
 Além disso, também serão pré-definidos obstáculos no espaço de busca que estarão contidos nas matrizes de prioridades e marcadas com valor -100.
 
 O problema foi resolvido em etapas, da mais simples para a mais complexa. Sendo assim serão considerados os cenários 
@@ -52,7 +52,8 @@ Para resolução do problema foi desenvolvido um ambiente com a definição de d
 
 A variável de deflação temporal (d_f), desenvolvida especificamente neste trabalho e que não faz parte da modelagem clássica, é responsável por reduzir as recompensas futuras de acordo com a quantidade de passos dados. 
 
-Como para cada cenário avaliado temos diferente quantidade de passos médios para conclusão do problema, se faz necessário identificar o número ideal da variável deflatora (d_f) para cada cenário. Inicialmente foi identificando, para cada cenário, o d_f ideal dentro do seguinte espaço de busca. 
+Como para cada cenário avaliado temos diferente quantidade de passos médios para conclusão do problema, se faz necessário identificar o número ideal da variável deflatora (d_f) para cada cenário. Inicialmente foi identificando, para cada cenário, o d_f ideal dentro do seguinte espaço de busca.
+
 Cada configuração a seguir teve o modelo rodado 10 vezes para obtenção de resultados:
 
     i.	‘matriz muito simples’ (matriz 4x3) -> [0.8, 0.9, 0.95, 0.99, 0.999, 0.9999];
@@ -61,54 +62,55 @@ Cada configuração a seguir teve o modelo rodado 10 vezes para obtenção de re
     iv.	‘matriz complexa’ (9x13) -> [0.95, 0.99, 0.999, 0.9999];
 
 Posteriormente foi realizada uma busca de melhores hiperparâmetros para cada cenário, em que tivemos o modelo rodado 10 vezes para cada configuração, sendo avaliados:
+
 i.	 ‘matriz muito simples’ (matriz 4x3):
-    o	Learning rate = [0.01, 0.001, 0.0001]
-    o	Gamma = [0.95, 0.99]
-    o	d_f = 0.95
-    o	max exp_rate (epsilon) = 1.0
-    o	min exp_rate decay (epsilon) = 0.01
-    o	exp_rate decay (epsilon) = [0.001, 0.005]
-    o	quantidade maxima de passos = 5.000
-    o	quantidade de episódios = 8000
+    o	Learning rate = [0.01, 0.001, 0.0001];
+    o	Gamma = [0.95, 0.99];
+    o	d_f = 0.95;
+    o	max exp_rate (epsilon) = 1.0;
+    o	min exp_rate decay (epsilon) = 0.01;
+    o	exp_rate decay (epsilon) = [0.001, 0.005];
+    o	quantidade maxima de passos = 5.000;
+    o	quantidade de episódios = 8000;
 
 ii.	‘matriz simples’ (5x5):
-    o	Learning rate = [0.01, 0.001, 0.0001]
-    o	Gamma = [0.95, 0.99]
-    o	d_f = [0.8, 0.9, 0.95, 0.999]
-    o	max exp_rate (epsilon) = 1.0
-    o	min exp_rate decay (epsilon) = 0.01
-    o	exp_rate decay (epsilon) = [0.001, 0.005]
-    o	quantidade maxima de passos = 10.000
+    o	Learning rate = [0.01, 0.001, 0.0001];
+    o	Gamma = [0.95, 0.99];
+    o	d_f = [0.8, 0.9, 0.95, 0.999];
+    o	max exp_rate (epsilon) = 1.0;
+    o	min exp_rate decay (epsilon) = 0.01;
+    o	exp_rate decay (epsilon) = [0.001, 0.005];
+    o	quantidade maxima de passos = 10.000;
     o	quantidade de episódios = 8000
 
 iii.	‘matriz média’ (8x8):
-    o	Learning rate = [0.01, 0.001, 0.0001]
-    o	Gamma = [0.95, 0.99]
-    o	d_f = [0.8, 0.9, 0.95, 0.999]
-    o	max exp_rate (epsilon) = 1.0
-    o	min exp_rate decay (epsilon) = 0.01
-    o	exp_rate decay (epsilon) = [0.001, 0.005]
-    o	quantidade maxima de passos = 10.000
+    o	Learning rate = [0.01, 0.001, 0.0001];
+    o	Gamma = [0.95, 0.99];
+    o	d_f = [0.8, 0.9, 0.95, 0.999];
+    o	max exp_rate (epsilon) = 1.0;
+    o	min exp_rate decay (epsilon) = 0.01;
+    o	exp_rate decay (epsilon) = [0.001, 0.005];
+    o	quantidade maxima de passos = 10.000;
     o	quantidade de episódios = 8000
 
 iv.	‘matriz simples’ (5x5):
-    o	Learning rate = [0.01, 0.001, 0.0001]
-    o	Gamma = [0.95, 0.99]
-    o	d_f = [0.8, 0.9, 0.95, 0.999]
-    o	max exp_rate (epsilon) = 1.0
-    o	min exp_rate decay (epsilon) = 0.01
-    o	exp_rate decay (epsilon) = [0.001, 0.005]
-    o	quantidade maxima de passos = 10.000
+    o	Learning rate = [0.01, 0.001, 0.0001];
+    o	Gamma = [0.95, 0.99];
+    o	d_f = [0.8, 0.9, 0.95, 0.999];
+    o	max exp_rate (epsilon) = 1.0;
+    o	min exp_rate decay (epsilon) = 0.01;
+    o	exp_rate decay (epsilon) = [0.001, 0.005];
+    o	quantidade maxima de passos = 10.000;
     o	quantidade de episódios = 8000
 
 v.	‘matriz complexa’ (9x13)
-    o	Learning rate = [0.01, 0.001, 0.0001]
-    o	Gamma = [0.95, 0.99]
-    o	d_f = [0.8, 0.9, 0.95, 0.999]
-    o	max exp_rate (epsilon) = 1.0
-    o	min exp_rate decay (epsilon) = 0.01
-    o	exp_rate decay (epsilon) = [0.001, 0.005]
-    o	quantidade maxima de passos = 10.000
+    o	Learning rate = [0.01, 0.001, 0.0001];
+    o	Gamma = [0.95, 0.99];
+    o	d_f = [0.8, 0.9, 0.95, 0.999];
+    o	max exp_rate (epsilon) = 1.0;
+    o	min exp_rate decay (epsilon) = 0.01;
+    o	exp_rate decay (epsilon) = [0.001, 0.005];
+    o	quantidade maxima de passos = 10.000;
     o	quantidade de episódios = 8000
 
 ### 4. Resultados
@@ -121,7 +123,7 @@ v.	‘matriz complexa’ (9x13)
 
 ---
 
-Matrícula: 192.110.215
+Matrícula: XXXXX
 
 Pontifícia Universidade Católica do Rio de Janeiro
 
