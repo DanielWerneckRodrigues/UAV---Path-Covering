@@ -96,35 +96,36 @@ iii.	‘matriz média’ (8x8):
     o	quantidade maxima de passos = 10.000;
     o	quantidade de episódios = 8000
 
-iv.	‘matriz simples’ (5x5):
-
-    o	Learning rate = [0.01, 0.001, 0.0001];
-    o	Gamma = [0.95, 0.99];
-    o	d_f = [0.8, 0.9, 0.95, 0.999];
-    o	max exp_rate (epsilon) = 1.0;
-    o	min exp_rate decay (epsilon) = 0.01;
-    o	exp_rate decay (epsilon) = [0.001, 0.005];
-    o	quantidade maxima de passos = 10.000;
-    o	quantidade de episódios = 8000
-
-v.	‘matriz complexa’ (9x13):
-
-    o	Learning rate = [0.01, 0.001, 0.0001];
-    o	Gamma = [0.95, 0.99];
-    o	d_f = [0.8, 0.9, 0.95, 0.999];
-    o	max exp_rate (epsilon) = 1.0;
-    o	min exp_rate decay (epsilon) = 0.01;
-    o	exp_rate decay (epsilon) = [0.001, 0.005];
-    o	quantidade maxima de passos = 10.000;
-    o	quantidade de episódios = 8000
+Para a 'matriz complexa', não foi realizado busca de hiperparâmetros e, de forma a testar parâmetros em cenário mais próximo de um cenário real, foi utilizado mesmos hiperparâmetros utilizados na melhor solução obtida pela 'matriz média'
 
 ### 4. Resultados
 
-(Um parágrafo)
+Os resultados foram obtidos com sucesso de acordo com a seleção das configurações e do instante (round) que produziu melhores recompensas totais, sendo esses:
+
+i.	Resultado Matriz Muito Simples (4x3)
+(Rota)
+(Recompensa)
+
+ii.	Resultado Matriz Simples (5x5)
+(Rota)
+(Recompensa)
+
+iii.	Resultado Matriz Média Complexidade (8x8)
+(Rota)
+(Recompensa)
+
+iv.	Resultado Matriz Complexa (13x9)
+(Rota)
+(Recompensa)
 
 ### 4. Conclusões
 
-(2 parágrafos)
+Os resultados foram obtidos com sucesso, para os cenários apresentados. Para futuros trabalhos é importante à utilização de outras técnicas de Reinfocerment Learning e de otimização para comparação com os resultados obtidos neste trabalho.
+
+Foi percebido que para cada cenário há diferença nos melhores hiperparâmetros utilizados, o que demanda tempo e esforço computacional. Também foi identificado que para cenários mais complexos temos aumento substancial do tempo de processamento. Essas características tornam difícil a utilização do trabalho proposto em cenários reais. Para futuros desenvolvimentos, verificar se treinamento de algoritmo de Deep Reinforcement Learning, pode ser aplicado de forma a mitigar esses problemas de aplicação.
+
+Além disso, de forma complementar ao trabalho aqui estudado, para obtenção da matriz de prioridades, além da possibilidade de a obtermos de acordo com a análise de um especialista, é possível a utilização de modelo de Redes Neurais Convolucionais para obtê-la a partir de imagens de satélite de forma a classificar determinado quadrante em relação a sua prioridade. Essa solução seria complementar ao trabalho aqui apresentado, que tem a matriz de prioridades como premissa. 
+
 
 ---
 
