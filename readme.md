@@ -42,7 +42,7 @@ O problema foi resolvido em etapas, da mais simples para a mais complexa. Sendo 
 
             i.	‘matriz muito simples’ (matriz 4x3);
             ii.	‘matriz simples’ (5x5);
-            iii.‘matriz média’ (8x8);
+            iii.    ‘matriz média’ (8x8);
             iv.	‘matriz complexa’ (9x13).
 
 
@@ -57,7 +57,7 @@ Cada configuração a seguir teve o modelo rodado 10 vezes para obtenção de re
 
     i.	‘matriz muito simples’ (matriz 4x3) -> [0.8, 0.9, 0.95, 0.99, 0.999, 0.9999];
     ii.	‘matriz simples’ (5x5) -> [0.9, 0.95, 0.99, 0.999, 0.9999];
-    iii.‘matriz média’ (8x8) -> [0.95, 0.99, 0.999, 0.9999];
+    iii.    ‘matriz média’ (8x8) -> [0.95, 0.99, 0.999, 0.9999];
     iv.	‘matriz complexa’ (9x13) -> [0.95, 0.99, 0.999, 0.9999];
 
 Posteriormente foi realizada uma busca de melhores hiperparâmetros para cada cenário, em que tivemos o modelo rodado 10 vezes para cada configuração, sendo avaliados:
