@@ -1,3 +1,0 @@
-       I. Resumo
-  Calamidades sempre ocorreram no mundo e, muitas vezes, a improbabilidade de ocorrerem, as torna de difícil previsão e precaução.  Sendo assim, busca-se o melhor comportamento e planejamento diante de um desastre, de forma a maximizar a quantidade de sobreviventes e minimizar o tempo de exposição ao perigo ao qual as vítimas estão sendo submetidas. O objetivo deste trabalho é otimizar o planejamento do resgate de vítimas, concluindo a busca com a menor quantidade de passos, dado um cenário em que conhecemos as prioridades de cada subespaço em nosso espaço de busca. Para resolução deste problema, será utilizada o método Q Learning na área de Reinforcement Learning para a otimização da rota a ser percorrida pelo agente.
-  
