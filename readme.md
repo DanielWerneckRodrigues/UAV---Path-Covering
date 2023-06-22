@@ -20,7 +20,8 @@ O objetivo deste trabalho é otimizar o planejamento do resgate de vítimas, con
 
 ### Abstract
 
-Calamities have always occurred in the world and, many times, the improbability of their occurrence makes them difficult to predict and prevent. Therefore, the best behavior and planning in the face of a disaster is sought, in order to maximize the number of survivors and minimize the time of exposure to the danger to which the victims are being subjected. 
+Calamities have always occurred in the world and, many times, the improbability of their occurrence makes them difficult to predict and prevent. Therefore, the best behavior and planning in the face of a disaster is sought, in order to maximize the number of survivors and minimize the time of exposure to the danger to which the victims are being subjected.
+
 The objective of this work is to optimize victim rescue planning, completing the search in the shortest time (fewer number of steps), given a scenario in which we know the priorities of each subspace in our search space. In addition to the main objective and direct applicability in the area of calamities, one of the objectives of this research is the ability to generalize, that is, that the work presented here can be applied to other problems with similar characteristics. To solve this problem, the Q Learning method will be used in the Reinforcement Learning area to optimize the route to be taken by the agent.
 
 
