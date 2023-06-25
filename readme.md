@@ -102,8 +102,7 @@ Os resultados foram obtidos com sucesso de acordo com a seleção das configura�
 
 i.	Resultado Matriz Muito Simples (4x3)
 
-![](https://github.com/UAV---Path-Covering/Q Learning/Resultado_RL_Q_Learning/00_Matriz Extra Simple_4x3
-/02_Gif/vtable_dim_4x3_2023-06-20_13-24-25.gif)
+![](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/tree/main/Q%20Learning/Resultado_RL_Q_Learning/00_Matriz%20Extra%20Simple_4x3/02_Gif/vtable_dim_4x3_2023-06-20_13-24-25.gif)
 
 Configuração 8 (lr=0.001; gamma=0.99; epsilon_decay_rate= 0.001) foi selecionada pois possui maior média geral de Total Rewards e menor média geral de quantidade de passos. Acima de 6000 episódios, possui solução estável e, aparentemente, possui convergência mais rápida que em outras configurações.
 
