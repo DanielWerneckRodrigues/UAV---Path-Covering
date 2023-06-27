@@ -116,11 +116,21 @@ iii.	Resultado Matriz Média Complexidade (8x8)
 
 ![](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/blob/main/Q%20Learning/Resultado_RL_Q_Learning/02_Matriz%20Medium_8x8/02_Gif/vtable_dim_8x8_2023-06-19_09-43-32.gif)
 
-A configuração 3 (lr=0.01; gamma=0.97; epsilon_decay_rate= 0.0005) foi selecionada pois possui maior média geral de Total Rewards e menor média geral de quantidade de passos. Aparentemente, possui convergência mais rápida que em outras configurações, apesar de que acima de 4000 episódios, resultados começarem a apresentar ruídos.
+A configuração 3 foi selecionada pois possui maior média geral de Total Rewards e menor média geral de quantidade de passos. Aparentemente, possui convergência mais rápida que em outras configurações, apesar de que acima de 4000 episódios, resultados começarem a apresentar ruídos.
+
+É importante notar que, para as configurações com taxa de decaimento da taxa de exploração de 0.001 e 0.0005, o resultado de Total Rewards começa a se deteriorar a partir de aproximadamente 2800 e 4500 episódios, respectivamente, sugerindo que modelo pode se beneficiar de maiores quantidade de episódios submetidos a maiores taxas de exploração.
+
+No entanto, foi obtido resultado aceitável (sub-ótimo ou ótimo, pois não há garantia de máximo global) referente à configuração selecionada com quantidade de Timesteps de 29 e Total Reward de 13.37. Esse resultado foi obtido selecionando a instância com o maior Total Reward e menor quantidade de Timesteps obtida no treinamento. Dessa forma, a deterioração da convergência teve pouco impacto no resultado final.
+
 
 iv.	Resultado Matriz Complexa (13x9)
 
-ADICIONAR
+![](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/blob/main/Q%20Learning/Resultado_RL_Q_Learning/02_Matriz%20Complex_9x13/02_Gif/vtable_dim_9x13_2023-06-26_21-17-31.gif)
+
+É percebida uma queda em Total Rewards e um aumento de Timesteps a partir de aproximadamente 2800 episódios. De maneira semelhante ao que ocorreu no cenário 8x8, que também teve piores resultados a partir de determinado limiar de episódios.
+
+No entanto, ao contrário do resultado obtido no cenário 8x8, não foi percebido um resultado sub-ótimo aceitável, com a quantidade de Timesteps do agente no ambiente de 1013 e Total Reward máximo percebido de 28.96.
+
 
 ### 4. Conclusões
 
@@ -128,9 +138,12 @@ Os resultados foram obtidos com sucesso, para os cenários apresentados. Para fu
 
 Foi percebido que para cada cenário há diferença nos melhores hiperparâmetros utilizados, o que demanda tempo e esforço computacional. Apesar disso, as diferenças nos resultados de recompensas totais foram sutis de configuração para configuração, sendo percebidos bons resultados em hiperparâmetros subótimos em relação aos escolhidos. 
 
-Também foi identificado que para cenários mais complexos, tem-se aumento substancial do tempo de processamento. Além disso, para cenários mais complexos a redução no valor dos hiperparâmetros está, normalmente, associada com maiores tempos de processamento e esforço computacional. Essas características tornam difícil a utilização do trabalho proposto em cenários reais. Para futuros desenvolvimentos, verificar se treinamento de algoritmo de Deep Reinforcement Learning, pode ser aplicado de forma a mitigar esses problemas de aplicação. Além disso, pode ser pertinente à otimização do código python visando tornar o esforço computacional menor na execução do modelo e na busca por melhores hiperparâmetros e consequentemente menor tempo.
+Para configuração da matriz de média complexidade (8x8) e alta complexidade (9x13) houve problemas na convergência do modelo, com a deterioração da recompensa total para episódios com menores taxas de exploração. Como sugestão para futuros trabalhos, é pertinente a utilização de outras curvas para redução do épsilon de maneira a aumentar a quantidade de episódios submetidos a uma maior taxa de exploração de forma a se obter maior convergência nesses cenários. Também pode ser interessante a definição de um valor mínimo para a taxa de exploração, de maneira que agente continue com chances de explorar mesmo em episódios mais avançados.
+
+Também foi identificado que para cenários mais complexos, tem-se aumento substancial do tempo de processamento e maior dificuldade de convergência do modelo. Além disso, para estes cenários a redução no valor dos hiperparâmetros está, normalmente, associada com maiores tempos de processamento e esforço computacional.  Essas características tornam difícil a utilização do trabalho proposto em cenários reais. Para futuros desenvolvimentos, verificar se treinamento de algoritmo de Deep Reinforcement Learning, pode ser aplicado de forma a mitigar esses problemas de aplicação e melhorar desempenho do modelo. Além disso, pode ser pertinente à otimização do código python visando tornar o esforço computacional menor na execução do modelo e na busca por melhores hiperparâmetros e consequentemente menor tempo.
 
 Ademais, de forma complementar ao trabalho aqui apresentado, para a obtenção da matriz de prioridades, além da possibilidade de a obtermos de acordo com a análise de um especialista, pode ser possível, mediante a testes, à utilização de modelo de Redes Neurais Convolucionais para obtê-la a partir de imagens de satélite de forma a classificar determinado quadrante em relação a sua prioridade.
+
 
 
 ---
