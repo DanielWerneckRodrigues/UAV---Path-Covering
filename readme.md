@@ -112,7 +112,7 @@ ii.	Resultado Matriz Simples (5x5)
 
 Configuração 2 (lr=0.01; gamma=0.95; epsilon_decay_rate= 0.001) foi selecionada pois possui maior média geral de Total Rewards e menor média geral de quantidade de passos. Acima de 6000 episódios, possui solução estável e, aparentemente, possui convergência mais rápida que em outras configurações.
 
-iii.	Resultado Matriz Média Complexidade (8x8)
+iii.	Resultado Matriz Média (8x8)
 
 ![](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/blob/main/Q%20Learning/Resultado_RL_Q_Learning/02_Matriz%20Medium_8x8/02_Gif/vtable_dim_8x8_2023-06-19_09-43-32.gif)
 
