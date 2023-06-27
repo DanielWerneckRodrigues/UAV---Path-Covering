@@ -127,7 +127,7 @@ iv.	Resultado Matriz Complexa (13x9)
 
 ![](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/blob/main/Q%20Learning/Resultado_RL_Q_Learning/03_Matriz%20Complex_9x13/02_Gif/vtable_dim_9x13_2023-06-26_21-17-31.gif)
 
-É percebida uma queda em Total Rewards e um aumento de Timesteps a partir de aproximadamente 2800 episódios. De maneira semelhante ao que ocorreu no cenário 8x8, que também teve piores resultados a partir de determinado limiar de episódios.
+Foi percebida uma queda em Total Rewards e um aumento de Timesteps a partir de aproximadamente 2800 episódios. De maneira semelhante ao que ocorreu no cenário 8x8, que também teve piores resultados a partir de determinado limiar de episódios.
 
 No entanto, ao contrário do resultado obtido no cenário 8x8, não foi percebido um resultado sub-ótimo aceitável, com a quantidade de Timesteps do agente no ambiente de 1013 e Total Reward máximo percebido de 28.96.
 
