@@ -9,7 +9,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 - [Projeto Completo](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/tree/main)
 
-- [Projeto.pdf](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/tree/main)
+- [Projeto.pdf]([https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/tree/main](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/blob/main/Q%20Learning/02_Trabalho%20Escrito.pdf))
 
 ---
 
