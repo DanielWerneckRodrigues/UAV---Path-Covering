@@ -1,11 +1,13 @@
 ﻿# Path Planning and Path Covering using Q Learning Algorithm
 
 #### Aluno: [Daniel Werneck Rodrigues](https://github.com/DanielWerneckRodrigues)
-#### Orientador: [Evelyn Batista](https://github.com/FelipeBorgesC) #ALTERAR
+#### Orientador: [Evelyn Batista](https://github.com/evysb)
 
 ---
 
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
+
+- [Projeto Completo](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/tree/main)
 
 - [Projeto.pdf](https://github.com/DanielWerneckRodrigues/UAV---Path-Covering/tree/main)
 
